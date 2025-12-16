@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой сайт с VK авторизацией</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Шапка сайта -->
+        <header>
+            <h1><i class="fab fa-github"></i> Мой GitHub сайт</h1>
+            <div id="auth-section">
+                <button id="login-btn" class="vk-btn">
+                    <i class="fab fa-vk"></i> Войти через VK
+                </button>
+                <div id="user-info" class="hidden">
+                    <img id="user-avatar" src="" alt="Аватар">
+                    <span id="user-name"></span>
+                    <button id="logout-btn" class="logout-btn">Выйти</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Навигация по вкладкам -->
+        <nav class="tabs">
+            <button class="tab-btn active" data-tab="home">
+                <i class="fas fa-home"></i> Главная
+            </button>
+            <button class="tab-btn" data-tab="profile">
+                <i class="fas fa-user"></i> Профиль
+            </button>
+            <button class="tab-btn" data-tab="friends">
+                <i class="fas fa-users"></i> Друзья
+            </button>
+            <button class="tab-btn" data-tab="settings">
+                <i class="fas fa-cog"></i> Настройки
+            </button>
+        </nav>
+
+        <!-- Содержимое вкладок -->
+        <main>
+            <div class="tab-content active" id="home-tab">
+                <h2>Добро пожаловать!</h2>
+                <p>Этот сайт размещен на GitHub Pages и использует авторизацию через VK.</p>
+                <p>Для доступа ко всем функциям войдите через VK.</p>
+            </div>
+
+            <div class="tab-content" id="profile-tab">
+                <h2>Профиль пользователя</h2>
+                <div id="profile-content">Войдите, чтобы увидеть информацию</div>
+            </div>
+
+            <div class="tab-content" id="friends-tab">
+                <h2>Друзья</h2>
+                <div id="friends-content">Войдите, чтобы увидеть список друзей</div>
+            </div>
+
+            <div class="tab-content" id="settings-tab">
+                <h2>Настройки</h2>
+                <p>Настройки вашего аккаунта появятся здесь после входа.</p>
+            </div>
+        </main>
+
+        <footer>
+            <p>Сайт создан с использованием GitHub Pages и VK API</p>
+        </footer>
+    </div>
+
+    <script src="auth.js"></script>
+    <script src="tabs.js"></script>
+</body>
+</html>

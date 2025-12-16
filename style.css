@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Шапка */
+header {
+    background: linear-gradient(90deg, #24292e 0%, #3a3f44 100%);
+    color: white;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 28px;
+}
+
+header h1 i {
+    margin-right: 15px;
+    color: #6cc644;
+}
+
+/* Кнопка VK */
+.vk-btn {
+    background: #4c75a3;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.vk-btn:hover {
+    background: #3d5f8a;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(76, 117, 163, 0.4);
+}
+
+/* Информация о пользователе */
+#user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#user-info.hidden {
+    display: none;
+}
+
+#user-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid #6cc644;
+}
+
+#user-name {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.logout-btn {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.logout-btn:hover {
+    background: #c0392b;
+}
+
+/* Вкладки */
+.tabs {
+    display: flex;
+    background: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 18px;
+    border: none;
+    background: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #495057;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.tab-btn:hover {
+    background: #e9ecef;
+    color: #007bff;
+}
+
+.tab-btn.active {
+    background: white;
+    color: #007bff;
+    border-bottom: 3px solid #007bff;
+    margin-bottom: -2px;
+}
+
+/* Контент вкладок */
+.tab-content {
+    display: none;
+    padding: 30px;
+    min-height: 400px;
+}
+
+.tab-content.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.tab-content h2 {
+    color: #24292e;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.tab-content p {
+    line-height: 1.6;
+    color: #586069;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+/* Футер */
+footer {
+    background: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    color: #6a737d;
+    border-top: 1px solid #e1e4e8;
+    font-size: 14px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .container {
+        border-radius: 10px;
+    }
+    
+    header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .tabs {
+        flex-direction: column;
+    }
+    
+    .tab-content {
+        padding: 20px;
+    }
+}
